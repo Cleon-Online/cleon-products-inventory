@@ -40,7 +40,7 @@ public class Product {
      * Product Number is the unique number for each product
      * This is the number that will be exposed to outside world
      */
-    @Column(columnDefinition = "varchar", updatable = false, nullable = false, unique = true)
+    @Column(name="product_number", columnDefinition = "varchar", updatable = false, nullable = false, unique = true)
     private String productNumber;
 
     /**

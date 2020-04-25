@@ -24,10 +24,12 @@ public class ProductInventoryController implements ProductInventoryApi {
     @Override
     public ResponseEntity<ProductInventoryDto> getProductInventoryByProductNumber(String productNumber) {
         log.info("Product Number: " + productNumber);
+        log.info("Product Inventory Service: " + productInventoryService);
         ProductInventoryDto productInventory = productInventoryService.getProductInventoryByProductNumber(productNumber);
 //                ProductInventoryDto productInventory = ProductInventoryDto.builder()
 //                                                .quantityOnHand(Integer.valueOf(100)).build();
-        log.info("Product Inventory onhand: " + productInventory.getQuantityOnHand());
+        //log.info("Product Inventory: " + productInventory);
+        //log.info("Product Inventory onhand: " + productInventory.getQuantityOnHand());
         return new ResponseEntity<>(productInventory, HttpStatus.OK);
     }
 }

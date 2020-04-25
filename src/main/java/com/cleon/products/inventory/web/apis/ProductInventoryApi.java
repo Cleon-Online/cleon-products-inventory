@@ -35,6 +35,6 @@ public interface ProductInventoryApi {
                     )
             }
     )
-    @GetMapping(value = "/product-inventory/{productNumber}",produces = {"application/json"})
+    @GetMapping(value = "/product/{productNumber}/inventory",produces = {"application/json"})
     ResponseEntity<ProductInventoryDto> getProductInventoryByProductNumber(@PathVariable("productNumber") String productNumber);
 }

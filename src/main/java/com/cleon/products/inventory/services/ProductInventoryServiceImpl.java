@@ -1,9 +1,7 @@
 package com.cleon.products.inventory.services;
 
-import com.cleon.products.inventory.domain.Product;
 import com.cleon.products.inventory.domain.ProductInventory;
 import com.cleon.products.inventory.repositories.ProductInventoryRepository;
-import com.cleon.products.inventory.repositories.ProductRepository;
 import com.cleon.products.inventory.web.mappers.ProductInventoryMapper;
 import com.cleon.products.inventory.web.model.ProductInventoryDto;
 import lombok.RequiredArgsConstructor;
@@ -22,13 +20,11 @@ import org.springframework.stereotype.Service;
 public class ProductInventoryServiceImpl implements IProductInventoryService {
 
     private final ProductInventoryRepository productInventoryRepository;
-    private final ProductRepository productRepository;
     private final ProductInventoryMapper mapper;
 
     @Override
     public ProductInventoryDto getProductInventoryByProductNumber(String productNumber) {
-        Product product = productRepository.findByProductNumber(productNumber);
-        ProductInventory productInventory = productInventoryRepository.findByProduct(product);
+        ProductInventory productInventory = productInventoryRepository.findByProductNumber(productNumber);
         if(productInventory!=null){
             ProductInventoryDto productInventoryDto = mapper.productInventoryToProductInventoryDto(productInventory);
             return productInventoryDto;

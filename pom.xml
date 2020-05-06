@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.cleon.products.inventory</groupId>
     <artifactId>cleon-products-inventory</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>cleon-products-inventory</name>
     <description>Inventory Management Services for Cleon Products</description>
 

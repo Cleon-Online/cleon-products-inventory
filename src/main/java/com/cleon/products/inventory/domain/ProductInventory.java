@@ -29,10 +29,7 @@ public class ProductInventory {
     /**
      * The product for which the inventory is mapped to
      */
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_id",
-            nullable = false)
-    private Product product;
+    private String productNumber;
 
     /**
      * The total quantity of the product that is available in hand

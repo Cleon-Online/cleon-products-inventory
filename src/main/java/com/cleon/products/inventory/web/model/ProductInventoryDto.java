@@ -15,10 +15,8 @@ import java.time.OffsetDateTime;
 @Setter
 @Builder
 public class ProductInventoryDto {
-    private Long productId;
     private String productNumber;
     private Long productInventoryId;
-    private String productName;
     private Integer quantityOnHand;
 //    private OffsetDateTime createdDate;
 //    private OffsetDateTime lastModifiedDate;

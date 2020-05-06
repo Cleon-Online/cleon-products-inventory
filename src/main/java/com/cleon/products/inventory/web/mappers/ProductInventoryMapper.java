@@ -16,13 +16,13 @@ import org.mapstruct.Mapping;
 @Mapper
 public interface ProductInventoryMapper {
 
-    @Mapping(source = "productId", target = "product.productId")
-    @Mapping(source = "productNumber", target = "product.productNumber")
-    @Mapping(source = "productName", target = "product.productName")
+//    @Mapping(source = "productId", target = "product.productId")
+//    @Mapping(source = "productNumber", target = "product.productNumber")
+//    @Mapping(source = "productName", target = "product.productName")
     ProductInventory productInventoryDtoToProductInventory(ProductInventoryDto productInventoryDto);
 
-    @Mapping(source = "product.productId", target = "productId")
-    @Mapping(source = "product.productNumber", target = "productNumber")
-    @Mapping(source = "product.productName", target = "productName")
+//    @Mapping(source = "product.productId", target = "productId")
+//    @Mapping(source = "product.productNumber", target = "productNumber")
+//    @Mapping(source = "product.productName", target = "productName")
     ProductInventoryDto productInventoryToProductInventoryDto(ProductInventory productInventory);
 }

@@ -34,7 +34,7 @@ class ProductInventoryControllerTest {
     @Test
     void getProductInventoryByProductNumber() throws Exception {
         mockMvc.perform(get(
-                "/product/" + "PH-123-324" +"/inventory")
+                "/products/" + "PH-123-324" +"/inventory")
                 .accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
     }
 }
